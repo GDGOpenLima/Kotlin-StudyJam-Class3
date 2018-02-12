@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Class 1</string>
+    <string name="button.login">Sign in</string>
+    <string name="title.email">Email</string>
+    <string name="test">Hola mundo</string>
+    <string name="title.password">Password</string>
+</resources>
