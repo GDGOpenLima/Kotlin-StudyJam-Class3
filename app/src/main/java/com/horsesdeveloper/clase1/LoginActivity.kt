@@ -51,8 +51,6 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
-    private fun EditText.getString() = this.text.toString().trim()
-
     private fun showMessage(context: Context, message: String) =
             Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
 }
