@@ -16,7 +16,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-
         /**
          * Java to Object form
          * var btnLogin = findViewById<Button>(R.id.login)
@@ -26,6 +25,9 @@ class LoginActivity : AppCompatActivity() {
             }
         }) */
 
+        val intent = Intent(this, ListActivity::class.java)
+        startActivity(intent)
+
         login.setOnClickListener {
 
             if (email.getString() ==
@@ -34,8 +36,7 @@ class LoginActivity : AppCompatActivity() {
                 if (password.getString() ==
                         "qwerty") {
 
-                    val intent = Intent(this,
-                            NewProductActivity::class.java)
+                    val intent = Intent(this, ListActivity::class.java)
                     startActivity(intent)
                 }
                 else {

@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_new_product.*
 
 class NewProductActivity : AppCompatActivity() {
@@ -34,6 +35,14 @@ class NewProductActivity : AppCompatActivity() {
                     editText4.getString().toInt(),
                     ""
             )
+
+            FirebaseDatabase
+                    .getInstance()
+                    .getReference()
+                    .child("product/agricola/norte")
+                    .push()
+                    .setValue(product)
+
         }
     }
 
